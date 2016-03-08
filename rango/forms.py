@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #coding=utf-8
 from django import forms
 from rango.models import Page, Category
@@ -27,7 +26,6 @@ class PageForm(forms.ModelForm):
         #fields = ('title', 'url','views')
 
 
-=======
 #coding: utf­ 8
 from django import forms
 from rango.models import Page, Category
@@ -50,4 +48,3 @@ class PageForm( forms.ModelForm) :
 		model = Page
 		exclude = ( 'category' , )
 		#fields = ( ' title' , ' url' , ' views' )
->>>>>>> 281a280

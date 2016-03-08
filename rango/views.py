@@ -24,27 +24,17 @@ def category(request, category_name_slug) :
 		pass
 	return render( request, 'rango/category.html' , context_dict)
 from rango.forms import CategoryForm
-<<<<<<< HEAD
 
-def add_category(request) :
-	if request.method == 'POST' :
-		form = CategoryForm(request.POST)
-		if form. is_valid( ) :
-=======
 def add_category( request) :
 	if request.method == 'POST' :
 		form = CategoryForm( request.POST)
 		if form.is_valid( ) :
->>>>>>> 281a280
 			form.save(commit=True)
 			return index(request)
 		else:
 			print form.errors
 	else:
 		form = CategoryForm( )
-<<<<<<< HEAD
-	return render( request, 'rango/add_category.html' , {'form' : form})
-=======
 	return render( request, 'rango/add_category.html' , {'form' : form})
 
 from rango.forms import PageForm
@@ -69,4 +59,3 @@ def add_page(request, category_name_slug) :
 		form = PageForm( )
 	context_dict = {'form' : form, 'category' : cat}
 	return render( request, 'rango/add_page.html' , context_dict)
->>>>>>> 281a280
