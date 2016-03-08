@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html>
+<head>
+    <title>Rango Class</title>
+</head>
+
+<body>
+    <h1>Welcome to Rango </h1>
+    hello world! 
+    {% if categories %}
+        <ul>
+            {% for category in categories %}
+            <!-- <li>{{ forloop.counter}} : {{ category.name }}</li> -->
+            <!-- Following line changed to add an HTML hyperlink -->
+            <li>
+            <a href="/rango/category/{{ category.slug }}">{{ category.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>There are no categories present.</strong>
+    {% endif %}
+
+    <a href='/rango/showpython'>There is python</a><br />
+
+    <img src = "{% static "images/itcast.png" %}" alt="Picture of itcast"/ >
+</body>
+
+</html>
